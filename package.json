@@ -1,0 +1,15 @@
+{
+  "name": "coding",
+  "version": "1.0.0",
+  "description": "css coding",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --server --files \"**/*\" && node-sass app.scss app.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "node-sass": "^4.7.2"
+  }
+}
