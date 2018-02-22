@@ -1,0 +1,50 @@
+body,
+html {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $color_base;
+  font-family: $family_base;
+  background-color: $color_white;
+  font-weight: normal;
+  @include font-size;
+  line-height: $lineHeight;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'palt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include sp_style {
+    @include font-size(1.6);
+    line-height: 1.8;
+  }
+}
+
+a {
+  color: $color_white;
+}
+
+::selection {
+  background: $color_key;
+  color: $color_white;
+}
+
+::-moz-selection {
+  background: $color_key;
+  color: $color_white;
+}
+// /*スクロールバー全体*/
+// ::-webkit-scrollbar {
+//   width: 5px;
+//   background-color: $color_sub;
+// }
+// /*スクロールバーの軌道*/
+// ::-webkit-scrollbar-track {}
+// /*スクロールバーの動く部分*/
+// ::-webkit-scrollbar-thumb {
+//   border-left: 5px solid $color_lightblue;
+// }

@@ -10,6 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-ejs": "^3.0.1",
+    "gulp-iconfont": "^9.0.2",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-watch": "^4.3.11",
     "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "gulp-sass": "^3.1.0"
   }
 }
