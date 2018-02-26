@@ -1,0 +1,8 @@
+[class*=" icon--"],
+[class^="icon--"] {
+    vertical-align: middle;
+
+    &:before {
+        vertical-align: text-bottom;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= fontName %></title>
+  <link rel="stylesheet" href="../../public/assets/css/index.css">
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .l-glyph {
+      margin: 0;
+      padding: 50px;
+    }
+    .l-glyph > li {
+      display: inline-block;
+      background-color: #FFF;
+      border-radius: .2em;
+      margin: .5em;
+      padding: 2.5em;
+      width: 8em;
+      height: 8em;
+      text-align: center;
+    }
+
+    .l-glyph .icon {
+      font-size: 3.8em;
+    }
+
+    .l-glyph .name {
+      margin-top: 1em;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .l-glyph .codepoint {
+      margin-top: 1em;
+      font-family: monospace;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <ul class="l-glyph"><% _.each(glyphs, function(glyph) { %>
+    <li>
+      <div class="icon <%= className %>--<%= glyph.name %>"></div>
+      <div class="name">.icon--<%= glyph.name %></div>
+      <div class="codepoint"><%= glyph.codepoint.toString(16).toUpperCase() %></div>
+    </li><% }); %>
+  </ul>
+</body>
+</html>
