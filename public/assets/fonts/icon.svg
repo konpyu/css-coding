@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="icon" horiz-adv-x="800">
+    <font-face font-family="icon"
+      units-per-em="500" ascent="500"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="play"
+      unicode="&#xF001;"
+      horiz-adv-x="500" d="M97.8125 439.6875L256.91125 347.831875L416.010625 255.975625L256.91125 164.12L97.8125 72.26375L97.8125 255.975625zM97.8125 439.6875L256.91125 347.831875L416.010625 255.975625L256.91125 164.12L97.8125 72.26375L97.8125 255.975625z" />
+  </font>
+</defs>
+</svg>
