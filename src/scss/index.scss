@@ -1,14 +1,14 @@
-@import "variables/variables";
-@import "mixin/mixin";
-@import "base/normalize";
-@import "base/base";
+@import "foundation/variables";
+@import "foundation/mixin";
+@import "foundation/normalize";
+@import "foundation/iconfont";
+@import "foundation/base";
 
-@import "block/wrapper";
-@import "block/container";
-@import "block/header";
-@import "block/footer";
-@import "block/btn";
+@import "layout/l-wrapper";
+@import "layout/l-container";
+@import "layout/l-header";
+@import "layout/l-footer";
 
-@import "utility/iconfont";
-@import "utility/icons";
-@import "utility/fonts";
+@import "object/component/c-btn";
+
+@import "object/project/p-camera";
