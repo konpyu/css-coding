@@ -36,9 +36,9 @@ gulp.task('iconfonts', function() {
           }),
           fontName: 'icon',
           fontPath: '../fonts/',
-          cssClass: 'icon'
+          cssClass: 'c-icon'
         }))
-        .pipe(gulp.dest(SRC + 'scss/utility/'));
+        .pipe(gulp.dest(SRC + 'scss/foundation/'));
     })
     .pipe(gulp.dest(PUBLIC + 'assets/fonts'));
 });

@@ -1,0 +1,41 @@
+@font-face {
+	font-family: "icon";
+	src: url('../fonts/icon.eot');
+	src: url('../fonts/icon.eot?#iefix') format('eot'),
+		url('../fonts/icon.woff') format('woff'),
+		url('../fonts/icon.ttf') format('truetype'),
+		url('../fonts/icon.svg#icon') format('svg');
+}
+
+.c-icon:before {
+	font-family: "icon";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+
+.c-icon--type_add:before {
+	content: "\F001";
+}
+
+.c-icon--type_check:before {
+	content: "\F002";
+}
+
+.c-icon--type_close:before {
+	content: "\F003";
+}
+
+.c-icon--type_heart:before {
+	content: "\F004";
+}
+
+.c-icon--type_shot:before {
+	content: "\F005";
+}
