@@ -2,5 +2,6 @@
 
 ```
 $ npm i
-$ npm run dev
+$ gulp iconfonts
+$ gulp
 ```
