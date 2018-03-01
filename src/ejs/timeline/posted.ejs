@@ -1,0 +1,28 @@
+<%- include('../_header', {page:'compact'}) %>
+<div class="c-loading">風船を届けています..</div>
+<div class="p-timeline">
+  <div class="p-timeline__item">
+    <div class="p-timeline__first">
+      <div class="c-photo" style="background-color: #462FDB;"><img src="" alt="" class="c-photo__image"></div>
+    </div>
+    <div class="p-timeline__secound">
+      <div class="c-photo" style="background-color: #2FDB64;"><img src="" alt="" class="c-photo__image"></div>
+    </div>
+    <div class="p-timeline__third">
+      <div class="c-photo" style="background-color: #2B7EFF;"><img src="" alt="" class="c-photo__image"></div>
+    </div>
+    <div class="p-timeline__me">
+      <div class="c-photo c-photo--me"><img src="https://pbs.twimg.com/profile_images/940991556437213184/LtGJUqRN_400x400.jpg" alt="" class="c-photo__image c-photo__image--me"><span class="c-photo__count">0</span></div>
+    </div>
+  </div>
+</div>
+<div class="p-btn">
+  <a href="/timeline/camera.html" class="c-btn c-btn--basic"><i class="c-icon c-icon--type_add"></i></a>
+</div>
+<script>
+var redirect = function(){
+  location.href = "/timeline/post_success.html";
+}
+setTimeout(redirect, 3000);
+</script>
+<%- include('../_footer') %>

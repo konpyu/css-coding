@@ -1,0 +1,44 @@
+<%- include('../_header', {page:'compact'}) %>
+<div class="p-timeline">
+  <div class="p-timeline__item">
+    <div class="p-timeline__first">
+      <div class="c-photo" style="background-color: #462FDB;"><img src="/assets/img/a.png" alt="" class="c-photo__image js-loading"><span class="c-photo__count">6,500</span></div>
+    </div>
+    <div class="p-timeline__secound">
+      <div class="c-photo" style="background-color: #2FDB64;"><img src="/assets/img/b.png" alt="" class="c-photo__image js-loading"><span class="c-photo__count">456</span></div>
+    </div>
+    <div class="p-timeline__third">
+      <div class="c-photo" style="background-color: #2B7EFF;"><img src="/assets/img/c.png" alt="" class="c-photo__image js-loading"><span class="c-photo__count">8</span></div>
+    </div>
+    <div class="p-timeline__me">
+      <div class="c-photo c-photo--me"><img src="https://pbs.twimg.com/profile_images/940991556437213184/LtGJUqRN_400x400.jpg" alt="" class="c-photo__image c-photo__image--me"><span class="c-photo__count">24</span></div>
+    </div>
+  </div>
+  <div class="p-timeline__item">
+    <div class="p-timeline__first">
+      <div class="c-photo" style="background-color: #462FDB;"><img src="/assets/img/c.png" alt="" class="c-photo__image is--active"><span class="c-photo__count">6,500</span></div>
+    </div>
+    <div class="p-timeline__secound">
+      <div class="c-photo" style="background-color: #2FDB64;"><img src="/assets/img/a.png" alt="" class="c-photo__image is--active"><span class="c-photo__count">456</span></div>
+    </div>
+    <div class="p-timeline__third">
+      <div class="c-photo" style="background-color: #2B7EFF;"><img src="/assets/img/b.png" alt="" class="c-photo__image is--active"><span class="c-photo__count">8</span></div>
+    </div>
+    <div class="p-timeline__me">
+      <div class="c-photo c-photo--me"><img src="https://pbs.twimg.com/profile_images/940991556437213184/LtGJUqRN_400x400.jpg" alt="" class="c-photo__image c-photo__image--me"><span class="c-photo__count">24</span></div>
+    </div>
+  </div>
+</div>
+<div class="p-btn">
+  <a href="/timeline/camera.html" class="c-btn c-btn--basic"><i class="c-icon c-icon--type_add"></i></a>
+</div>
+<script>
+var photo = document.querySelectorAll('.js-loading');
+var photo_loading = function(){
+  for (var i = 0; i < photo.length; ++i) {
+   photo[i].classList.add('is--success');
+  }
+}
+setTimeout(photo_loading, 100);
+</script>
+<%- include('../_footer') %>

@@ -1,0 +1,287 @@
+.l-header {
+  z-index: 9999;
+  position: relative;
+}
+
+.l-container {
+  z-index: 2;
+  position: relative;
+  $root: &;
+
+  #{$root}__ {}
+  @include tb_style {}
+  @include sp_style {}
+}
+
+.l-home {
+  &__header {
+    text-align: center;
+    padding-top: 40vh;
+  }
+}
+
+.c-btn {
+  display: block;
+  height: 60px;
+  min-width: 60px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 60px;
+  color: $color_base;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  box-shadow: 0 12px 24px rgba($color_base,0.5);
+  transition: all 300ms $easeIn;
+
+  &__label {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  &--basic {
+    background-color: #F7FD64;
+  }
+
+  &--shot {
+    background-color: #FF5959;
+    color: $color-white;
+  }
+
+  &--success {
+    background-color: #0ADE79;
+    color: $color-white;
+  }
+
+  &.is--success {
+    background-color: #0ADE79;
+    color: $color-white;
+  }
+}
+
+.p-btn {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.p-logo {
+  text-align: center;
+  padding-top: 40vh;
+  $root: &;
+
+  &__description {
+    @include font-size(1.4);
+    color: #fff;
+    letter-spacing: 0.3em;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  &__image {}
+
+  &--compact {
+    text-align: center;
+    padding-top: 5vh;
+
+    #{$root}__description {
+      display: none;
+    }
+
+    #{$root}__image {
+      width: 120px;
+    }
+  }
+}
+
+.p-timeline {
+  &__empty {
+    padding-top: 50vh;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    position: relative;
+    height: 80vh;
+  }
+
+  &__first {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    animation: balloon 3000ms $easeInOut infinite;
+  }
+
+  &__secound {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    animation: balloon 3000ms $easeInOut 300ms infinite;
+  }
+
+  &__third {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    animation: balloon 3000ms $easeInOut 600ms infinite;
+  }
+
+  &__me {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -40px;
+    animation: balloon 3000ms $easeInOut 800ms infinite;
+  }
+  @keyframes balloon {
+    50% {
+      transform: translate(0,30px);
+    }
+  }
+}
+
+.c-camera {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 2200ms $easeIn;
+
+  &__field {
+    width: 350px;
+    height: 350px;
+    border-radius: 350px;
+    overflow: hidden;
+    background-color: $color_base;
+
+    &:before {
+      transition: all 300ms $easeIn;
+    }
+
+    &.is--loading {
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-left: 5px solid #FF5959;
+        border-right: 5px solid #FF5959;
+        border-bottom: 5px solid #FF5959;
+        border-top: 5px solid transparent;
+        border-radius: 350px;
+        animation: camera_loading 1500ms $easeInOut infinite;
+      }
+      @keyframes camera_loading {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    &.is--success {
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid #0ADE79;
+        border-radius: 350px;
+      }
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+  }
+
+  &.is--push {
+    animation: balloon_push 2500ms $easeInOut 1 both;
+    @keyframes balloon_push {
+      25% {
+        margin-left: 30px;
+      }
+
+      50% {
+        margin-left: -30px;
+      }
+
+      100% {
+        transform: translateY(-200vh);
+      }
+    }
+  }
+}
+
+.c-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  overflow: hidden;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    height: auto;
+    transform: scale(0);
+    transition: all 1000ms $easeOut;
+    border-radius: 200px;
+    display: block;
+
+    &--me {
+      transform: scale(1);
+    }
+
+    &.is--success {
+      transform: scale(1);
+    }
+
+    &.is--active {
+      transform: scale(1);
+    }
+  }
+
+  &__count {
+    @include font-size(1.4);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: $color-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    text-shadow: 1px 1px 0 rgba($color_base,0.3);
+  }
+
+  &--me {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.c-loading {
+  position: fixed;
+  top: 0;
+  padding-top: 14vh;
+  font-weight: bold;
+  z-index: 3;
+  color: $color-white;
+  text-align: center;
+  width: 100%;
+  @include font-size(1.4);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+}

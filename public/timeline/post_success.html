@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="apple-touch-icon" href="assets/img/app-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/ico">
+    <link rel="canonical" href="">
+  </head>
+  <body>
+    <div class="l-wrapper">
+      <header class="l-header">
+        <h1 class="p-logo p-logo--compact">
+          <span class="p-logo__description">世界の誰かに写真を届ける</span>
+          <a href="/" class="p-logo__link"><img class="p-logo__image" src="/assets/img/logo.svg" alt="balloon"></a>
+        </h1>
+      </header>
+      <main class="l-container">
+
+<div class="p-timeline">
+  <div class="p-timeline__item">
+    <div class="p-timeline__first">
+      <div class="c-photo" style="background-color: #462FDB;"><img src="/assets/img/a.png" alt="" class="c-photo__image js-loading"><span class="c-photo__count">6,500</span></div>
+    </div>
+    <div class="p-timeline__secound">
+      <div class="c-photo" style="background-color: #2FDB64;"><img src="/assets/img/b.png" alt="" class="c-photo__image js-loading"><span class="c-photo__count">456</span></div>
+    </div>
+    <div class="p-timeline__third">
+      <div class="c-photo" style="background-color: #2B7EFF;"><img src="/assets/img/c.png" alt="" class="c-photo__image js-loading"><span class="c-photo__count">8</span></div>
+    </div>
+    <div class="p-timeline__me">
+      <div class="c-photo c-photo--me"><img src="https://pbs.twimg.com/profile_images/940991556437213184/LtGJUqRN_400x400.jpg" alt="" class="c-photo__image c-photo__image--me"><span class="c-photo__count">24</span></div>
+    </div>
+  </div>
+  <div class="p-timeline__item">
+    <div class="p-timeline__first">
+      <div class="c-photo" style="background-color: #462FDB;"><img src="/assets/img/c.png" alt="" class="c-photo__image is--active"><span class="c-photo__count">6,500</span></div>
+    </div>
+    <div class="p-timeline__secound">
+      <div class="c-photo" style="background-color: #2FDB64;"><img src="/assets/img/a.png" alt="" class="c-photo__image is--active"><span class="c-photo__count">456</span></div>
+    </div>
+    <div class="p-timeline__third">
+      <div class="c-photo" style="background-color: #2B7EFF;"><img src="/assets/img/b.png" alt="" class="c-photo__image is--active"><span class="c-photo__count">8</span></div>
+    </div>
+    <div class="p-timeline__me">
+      <div class="c-photo c-photo--me"><img src="https://pbs.twimg.com/profile_images/940991556437213184/LtGJUqRN_400x400.jpg" alt="" class="c-photo__image c-photo__image--me"><span class="c-photo__count">24</span></div>
+    </div>
+  </div>
+</div>
+<div class="p-btn">
+  <a href="/timeline/camera.html" class="c-btn c-btn--basic"><i class="c-icon c-icon--type_add"></i></a>
+</div>
+<script>
+var photo = document.querySelectorAll('.js-loading');
+var photo_loading = function(){
+  for (var i = 0; i < photo.length; ++i) {
+   photo[i].classList.add('is--success');
+  }
+}
+setTimeout(photo_loading, 100);
+</script>
+  <footer class="l-footer"></footer>
+</div>
+</body>
+</html>
+

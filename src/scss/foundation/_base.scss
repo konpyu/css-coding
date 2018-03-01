@@ -10,7 +10,7 @@ html {
 body {
   color: $color_base;
   font-family: $family_base;
-  background-color: $color_white;
+  background-color: #2B2C2F;
   font-weight: normal;
   @include font-size;
   line-height: $lineHeight;
@@ -18,6 +18,7 @@ body {
   font-feature-settings: 'palt' 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.2em;
   @include sp_style {
     @include font-size(1.6);
     line-height: 1.8;

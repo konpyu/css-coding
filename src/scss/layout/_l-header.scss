@@ -1,6 +1,0 @@
-.l-header {
-  $root: &;
-  #{$root}__{}
-  @include tb_style {}
-  @include sp_style {}
-}
