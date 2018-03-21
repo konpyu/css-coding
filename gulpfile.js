@@ -22,7 +22,7 @@ gulp.task('iconfonts', function() {
       formats: ['ttf', 'eot', 'woff', 'svg'],
       appendCodepoints: false,
       normalize: true,
-      fontHeight: 500,
+      fontHeight: 1000,
       timestamp: runTimestamp
     }))
     .on('glyphs', function(glyphs) {

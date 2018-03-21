@@ -1,6 +1,10 @@
 .l-header {
   z-index: 9999;
-  position: relative;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .l-container {
@@ -97,7 +101,10 @@
 
 .p-timeline {
   &__empty {
-    padding-top: 50vh;
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%,-100%);
     text-align: center;
     color: $color-white;
   }
@@ -108,27 +115,41 @@
     width: 320px;
     position: relative;
     height: 80vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
   }
 
   &__first {
     position: absolute;
-    top: 0;
-    left: -20px;
+      top: 0;
+      left: -120px;
     animation: balloon 3000ms $easeInOut infinite;
+    @include sp_style {
+      top: 0;
+      left: -20px;
+    }
   }
 
   &__secound {
     position: absolute;
     top: 15%;
-    left: 40%;
+    left: 50%;
     animation: balloon 3000ms $easeInOut 300ms infinite;
+    @include sp_style {
+    top: 15%;
+    left: 40%;
+    }
   }
 
   &__third {
     position: absolute;
     top: 40%;
-    left: 0;
+    left: -20px;
     animation: balloon 3000ms $easeInOut 600ms infinite;
+    @include sp_style {
+    top: 40%;
+    left: 0;
+    }
   }
 
   &__me {
@@ -158,6 +179,7 @@
     border-radius: 350px;
     overflow: hidden;
     background-color: $color_base;
+    animation: balloon 3000ms $easeInOut 800ms infinite;
 
     &:before {
       transition: all 300ms $easeIn;
@@ -225,11 +247,16 @@
 }
 
 .c-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 200px;
   overflow: hidden;
   position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  @include sp_style {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+  }
 
   &__image {
     width: 100%;
@@ -283,5 +310,5 @@
   text-align: center;
   width: 100%;
   @include font-size(1.4);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+  //background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
 }
